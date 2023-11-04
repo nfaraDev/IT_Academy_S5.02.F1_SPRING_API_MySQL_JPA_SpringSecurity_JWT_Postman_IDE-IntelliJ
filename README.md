@@ -1,5 +1,5 @@
 # 
-<p float="left">
+<p >
   <img src="src/main/resources/images/logos.png" width="100" />
 
 </p>
@@ -20,7 +20,8 @@ El software tiene que respetar los principales patrones de diseño.
 **NOTAS**
 Tienes que tener en cuenta los siguientes detalles de construcción:
 
-**URL's** 
+
+**MySql **
 Data Base= MySQL:db_game
 server.port=9001
 spring.datasource.url=jdbc:mysql://localhost:3307/db_game
@@ -31,6 +32,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
+**URL's** 
 TABLA: /players: crea un jugador/a.
 HEDE /players: modifica el nombre del jugador/a.
 TABLA /players/{*id}/*games/ : un jugador/a específico realiza una tirada de los dados.
@@ -46,25 +48,42 @@ Endpoints filter by pre-authorization:
 ```
 POST/ http://localhost:9001/auth/register
 By Register: Donde el ID debe ser el mismo que el ID del usuario relacionado con el token JWT
+
 POST/ http://localhost:9001/auth/login
 By Login: Donde con el email y password se loga el jugador y le devuelve la autorizacion con un token JWT
 
+POST/ http://localhost:9001/api/player/add
+By agregar player: con el token jwt del jugador logado podemos añadir mas jugadores
 
+PUT/ http://localhost:9001/api/player/update/1
+By modificar player: con el token jwt, el jugador n1 (era Calimero ) logado modificar al jugador y poner Mono en su lugar
 
+POST / http://localhost:9001/api/game/1/games
+By tirar dados el jugador 1: con el token jwt, el jugador N1 (Mono) tira los dados pierde y sigue tirando hasta que gana
+
+GET/ http://localhost:9001/api/player/
+By listar todos los jugadores: con el token jwt, el jugador listamos (all/player) y nos da una lista de 4 jugadores
+
+GET/  http://localhost:9001/api/game/3/games
+By listamos todas las jugadas del jugador 3: con el token jwt, el jugador N3(Mickey) listamos todas las jugadas
+
+GET/ http://localhost:9001/api/game/ranking/loser
+By peor Porcentaje Exito: con el token jwt, nos da el peor porcentaje de exito 20% del Jugador N1 Mono
+
+GET/ http://localhost:9001/api/game/ranking/winner
+By mejor Porcentaje de Exito: con el token jwt, nos da el mejor porcentaje de exito 25% del Jugador N3 Mickey
 
 ### References:
 
 - JPA entity relationships
-  - [Bezkoder](https://www.bezkoder.com/jpa-one-to-many/) 
-  - [Tutorialspoint](https://www.tutorialspoint.com/jpa/jpa_entity_relationships.htm)
-
--MySql - 
- 
+  - [Jaxx- Spring Boot | DTOs con Spring Data JPA y Spring Boot-Parte 1 ](https://www.youtube.com/watch?v=H8QmmbFs8tk)
+  - [Jaxx- Spring Boot | DTOs con Spring Data JPA y Spring Boot-Parte 2 ](https://www.youtube.com/watch?v=HvLbN9L6_Hg)
+  
 - JWT - SpringBoot Security
-  - [Bezkoder - Spring Boot Token based Authentication with Spring Security & JWT](https://www.bezkoder.com/spring-boot-jwt-authentication/)
+  - [La Tecnologia Avanza - Spring Boot Token based Authentication with Spring Security & JWT](https://www.youtube.com/watch?v=ZzpDyIJizjo)
 
 - Postman
-  - [REST API Request Validation & Exception Handling Realtime Example | JavaTechie](https://www.youtube.com/watch?v=gPnd-hzM_6A)
+  - [Geek QA- Pruebas de APIs con POSTMAN ](https://desarrolloweb.com/articulos/como-usar-postman-probar-api)
   
 
 
