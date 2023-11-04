@@ -4,7 +4,7 @@
 
 </p>
 
-## Spring Boot MySQL, Security, Postman
+## Spring Boot, Hibernate, MySQL, Security,JWT, Postman
 
 ### Description
 
@@ -21,6 +21,16 @@ El software tiene que respetar los principales patrones de diseño.
 Tienes que tener en cuenta los siguientes detalles de construcción:
 
 **URL's** 
+Data Base= MySQL:db_game
+server.port=9001
+spring.datasource.url=jdbc:mysql://localhost:3307/db_game
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
 TABLA: /players: crea un jugador/a.
 HEDE /players: modifica el nombre del jugador/a.
 TABLA /players/{*id}/*games/ : un jugador/a específico realiza una tirada de los dados.
@@ -31,18 +41,15 @@ GET /players/*ranking: devuelve el ranking medio de todos los jugadores/se del s
 GET /players/*ranking/*loser: devuelve el jugador/a con peor porcentaje de éxito.
 GET /players/*ranking/*winner: devuelve el jugador con peor porcentaje de éxito.
 
-### Swagger summary 
+### Postman summary 
 Endpoints filter by pre-authorization:
 ```
-By ROLE: The role assigned to the user related to the JWT token
-@PreAuthorize("hasAuthority('ADMIN')")
-@PreAuthorize("hasAuthority('USER') or hasAuthority('ADMIN')")
+POST/ http://localhost:9001/auth/register
+By Register: Donde el ID debe ser el mismo que el ID del usuario relacionado con el token JWT
+POST/ http://localhost:9001/auth/login
+By Login: Donde con el email y password se loga el jugador y le devuelve la autorizacion con un token JWT
 
-By ID: Where the ID must be the same that the id of the user related to the JWT token
-@PreAuthorize("#id == authentication.principal.id")
 
-By ID or ROLE: 
-@PreAuthorize("#id == authentication.principal.id or hasAuthority('ADMIN')")
 
 
 ### References:
