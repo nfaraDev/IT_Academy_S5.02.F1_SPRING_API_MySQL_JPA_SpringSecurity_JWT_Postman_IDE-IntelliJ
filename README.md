@@ -74,12 +74,18 @@ By peor Porcentaje Exito: con el token jwt, nos da el peor porcentaje de exito 2
 GET/ http://localhost:9001/api/game/ranking/winner
 By mejor Porcentaje de Exito: con el token jwt, nos da el mejor porcentaje de exito 25% del Jugador N3 Mickey
 
+DELETE/ http://localhost:9001/api/game/6/games
+By eliminar el jugador N6(Lobo)
+
 ### References:
 
 - JPA entity relationships
   - [Jaxx- Spring Boot | DTOs con Spring Data JPA y Spring Boot-Parte 1 ](https://www.youtube.com/watch?v=H8QmmbFs8tk)
   - [Jaxx- Spring Boot | DTOs con Spring Data JPA y Spring Boot-Parte 2 ](https://www.youtube.com/watch?v=HvLbN9L6_Hg)
-  
+
+- MongoDB
+  - [Roberto Crespo- Spring Data MongoDB: Acceso a datos – Cómo construir microservicios con Spring Boot (III) ]https://robertocrespo.net/implementar-microservicios-spring-boot-iii-acceso-datos-mongodb-data/
+
 - JWT - SpringBoot Security
   - [La Tecnologia Avanza - Spring Boot Token based Authentication with Spring Security & JWT](https://www.youtube.com/watch?v=ZzpDyIJizjo)
 
