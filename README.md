@@ -33,7 +33,7 @@ GET /players/*ranking/*loser: devuelve el jugador/a con peor porcentaje de éxit
 GET /players/*ranking/*winner: devuelve el jugador con peor porcentaje de éxito.
 
 **PROYECTO: JUEGO DE DADOS** 
-**MySql **
+**Application.properties **
 Data Base= MySQL:db_game
 server.port=9001
 spring.datasource.url=jdbc:mysql://localhost:3307/db_game
@@ -83,8 +83,8 @@ By eliminar el jugador N6(Lobo)
   - [Jaxx- Spring Boot | DTOs con Spring Data JPA y Spring Boot-Parte 1 ](https://www.youtube.com/watch?v=H8QmmbFs8tk)
   - [Jaxx- Spring Boot | DTOs con Spring Data JPA y Spring Boot-Parte 2 ](https://www.youtube.com/watch?v=HvLbN9L6_Hg)
 
-- MongoDB
-  - [Roberto Crespo- Spring Data MongoDB: Acceso a datos – Cómo construir microservicios con Spring Boot (III) ]https://robertocrespo.net/implementar-microservicios-spring-boot-iii-acceso-datos-mongodb-data/
+- MySQL
+  - [Teddy Smith- Spring Boot For Beginners - Architecture Overview ] (https://www.youtube.com/watch?v=2tUHNRp7Auo)
 
 - JWT - SpringBoot Security
   - [La Tecnologia Avanza - Spring Boot Token based Authentication with Spring Security & JWT](https://www.youtube.com/watch?v=ZzpDyIJizjo)
