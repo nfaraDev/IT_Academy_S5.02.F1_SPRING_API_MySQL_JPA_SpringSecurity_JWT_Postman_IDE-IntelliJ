@@ -1,8 +1,5 @@
 # 
-<p >
-  <img src="src/main/resources/images/logos.png" width="100" />
 
-</p>
 
 ## Spring Boot, Hibernate, MySQL, Security,JWT, Postman
 
