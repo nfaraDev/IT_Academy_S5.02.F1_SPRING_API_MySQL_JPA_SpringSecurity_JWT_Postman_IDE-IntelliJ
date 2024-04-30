@@ -1,7 +1,7 @@
 # JUEGO DE DADOS
 
 
-## Spring Boot, Hibernate, MySQL, Security,JWT, Postman
+## tECNOLOGIAS: Spring Boot, Hibernate, MySQL, Security, JWT, Postman
 
 ### Description
 
