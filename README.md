@@ -22,6 +22,7 @@ Persistencia: utiliza como base de datos MySQL.
 Tienes que tener en cuenta los siguientes detalles de construcción:
 
 **URL's** 
+
 TABLA: /players: crea un jugador/a.
 
 HEDE /players: modifica el nombre del jugador/a.
