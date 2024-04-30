@@ -114,6 +114,7 @@ By eliminar el jugador N6(Lobo)
 
 - Postman
   - [Geek QA- Pruebas de APIs con POSTMAN ](https://desarrolloweb.com/articulos/como-usar-postman-probar-api)
+
   
 ##Explicacion Arquitectura Paquete Seguridad en el Proyecto "JUEGO DE DADOS":
 
@@ -121,7 +122,7 @@ La estructura de este proyecto parece sigue este patrón.
 
 Aquí te explicaré cómo funciona cada componente:
 
-                     PAQUETE AUTH/
+     PAQUETE AUTH:
 
 -CLASE AuthenticationController: Este es el controlador que maneja las solicitudes de autenticación. Recibe las credenciales del usuario (nombre de usuario y contraseña) y las pasa al servicio de autenticación para su procesamiento.
 
@@ -130,19 +131,20 @@ Aquí te explicaré cómo funciona cada componente:
 -CLASE AuthenticationService: Este es el servicio que maneja la lógica de autenticación. Utiliza el servicio de usuario para verificar las credenciales del usuario y genera un token JWT si las credenciales son válidas.
 
 -CLASE RegisterRequest: Esta clase representa la solicitud de registro de un nuevo usuario. Contiene los detalles necesarios para crear una nueva cuenta de usuario.
-PAQUETE CONFIG/
+
+    PAQUETE CONFIG:
 
 -CLASES ApplicationConfig y SecurityConfig: Estas clases contienen la configuración de la aplicación y la seguridad, respectivamente. Proporcionan la configuración necesaria para Spring Boot y Spring Security, incluyendo la configuración de los filtros de seguridad, los servicios de autenticación y las rutas de la API.
 
-PAQUETE JWT/
+     PAQUETE JWT:
 
 -CLASES JwtAuthenticationFilter y JwtService: El filtro JwtAuthenticationFilter intercepta las solicitudes HTTP y extrae el token JWT de la cabecera de autorización. Luego, utiliza el servicio JwtService para validar el token y establecer la autenticación en el contexto de seguridad de Spring.
 
-PAQUETE REPOSITORY/
+    PAQUETE REPOSITORY:
 
 -INTERFACE UserRepository: Esta interfaz extiende de JpaRepository y proporciona métodos para interactuar con la base de datos de usuarios.
 
-PAQUETE USER/
+    PAQUETE USER:
 
 -ENUN Role y la CLASE User: Estas clases representan los roles y los usuarios en tu aplicación. Proporcionan los detalles necesarios para la autenticación y la autorización, como el nombre de usuario, la contraseña y los roles del usuario.
 *********************************************************************************************************************************************************************************
