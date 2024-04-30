@@ -23,13 +23,21 @@ Tienes que tener en cuenta los siguientes detalles de construcción:
 
 **URL's** 
 TABLA: /players: crea un jugador/a.
+
 HEDE /players: modifica el nombre del jugador/a.
+
 TABLA /players/{*id}/*games/ : un jugador/a específico realiza una tirada de los dados.
+
 DELETE /players/{*id}/*games: elimina las tiradas del jugador/a.
+
 GET /players/: devuelve el listado de todos los jugadores/se del sistema con su porcentaje mediano de éxitos.
+
 GET /players/{*id}/*games: devuelve el listado de jugadas por un jugador/a.
+
 GET /players/*ranking: devuelve el ranking medio de todos los jugadores/se del sistema. Es decir, el porcentaje mediano de éxitos.
+
 GET /players/*ranking/*loser: devuelve el jugador/a con peor porcentaje de éxito.
+
 GET /players/*ranking/*winner: devuelve el jugador con peor porcentaje de éxito.
 
 **PROYECTO: JUEGO DE DADOS** 
