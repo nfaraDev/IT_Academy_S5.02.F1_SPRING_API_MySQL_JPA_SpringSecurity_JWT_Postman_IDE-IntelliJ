@@ -129,26 +129,29 @@ Aquí te explicaré cómo funciona cada componente:
 
      PAQUETE AUTH:
 
--CLASE AuthenticationController: Este es el controlador que maneja las solicitudes de autenticación. Recibe las credenciales del usuario (nombre de usuario y contraseña)
- y las pasa al servicio de autenticación para su procesamiento.
+-CLASE AuthenticationController: Este es el controlador que maneja las solicitudes de autenticación. Recibe las credenciales del
+usuario (nombre de usuario y contraseña) y las pasa al servicio de autenticación para su procesamiento.
 
--CLASES AuthenticationRequest y AuthenticationResponse: Estas clases representan los objetos de solicitud y respuesta utilizados en el proceso de autenticación.
-La solicitud contiene las credenciales del usuario y la respuesta contiene el token de autenticación JWT.
+-CLASES AuthenticationRequest y AuthenticationResponse: Estas clases representan los objetos de solicitud y respuesta utilizados
+en el proceso de autenticación.La solicitud contiene las credenciales del usuario y la respuesta contiene el token de autenticación JWT.
 
--CLASE AuthenticationService: Este es el servicio que maneja la lógica de autenticación. Utiliza el servicio de usuario para verificar las credenciales del usuario
-y genera un token JWT si las credenciales son válidas.
+-CLASE AuthenticationService: Este es el servicio que maneja la lógica de autenticación. Utiliza el servicio de usuario para verificar
+las credenciales del usuario y genera un token JWT si las credenciales son válidas.
 
--CLASE RegisterRequest: Esta clase representa la solicitud de registro de un nuevo usuario. Contiene los detalles necesarios para crear una nueva cuenta de usuario.
+-CLASE RegisterRequest: Esta clase representa la solicitud de registro de un nuevo usuario. Contiene los detalles necesarios para crear
+una nueva cuenta de usuario.
 
     PAQUETE CONFIG:
 
--CLASES ApplicationConfig y SecurityConfig: Estas clases contienen la configuración de la aplicación y la seguridad, respectivamente. Proporcionan la configuración
- necesaria para Spring Boot y Spring Security, incluyendo la configuración de los filtros de seguridad, los servicios de autenticación y las rutas de la API.
+-CLASES ApplicationConfig y SecurityConfig: Estas clases contienen la configuración de la aplicación y la seguridad, respectivamente.
+Proporcionan la configuración necesaria para Spring Boot y Spring Security, incluyendo la configuración de los filtros de seguridad,
+los servicios de autenticación y las rutas de la API.
 
      PAQUETE JWT:
 
--CLASES JwtAuthenticationFilter y JwtService: El filtro JwtAuthenticationFilter intercepta las solicitudes HTTP y extrae el token JWT de la cabecera de autorización.
- Luego, utiliza el servicio JwtService para validar el token y establecer la autenticación en el contexto de seguridad de Spring.
+-CLASES JwtAuthenticationFilter y JwtService: El filtro JwtAuthenticationFilter intercepta las solicitudes HTTP y extrae el token JWT
+ de la cabecera de autorización.Luego, utiliza el servicio JwtService para validar el token y establecer la autenticación en el contexto
+ de seguridad de Spring.
 
     PAQUETE REPOSITORY:
 
@@ -156,12 +159,13 @@ y genera un token JWT si las credenciales son válidas.
 
     PAQUETE USER:
 
--ENUN Role y la CLASE User: Estas clases representan los roles y los usuarios en tu aplicación. Proporcionan los detalles necesarios para la autenticación y la autorización,
- como el nombre de usuario, la contraseña y los roles del usuario.
-*********************************************************************************************************************************************************************************
-En resumen, la seguridad en Spring Boot se maneja principalmente a través de la autenticación basada en tokens JWT. Cuando un usuario se autentica con éxito, el servidor
-genera un token JWT que el usuario debe incluir en las cabeceras de autorización de sus solicitudes HTTP subsiguientes. Este token es validado por el filtro JwtAuthenticationFilter
-en cada solicitud, y si es válido, la autenticación del usuario se establece en el contexto de seguridad de Spring.
+-ENUN Role y la CLASE User: Estas clases representan los roles y los usuarios en tu aplicación. Proporcionan los detalles necesarios
+para la autenticación y la autorización,como el nombre de usuario, la contraseña y los roles del usuario.
+********************************************************************************************************************************************
+En resumen, la seguridad en Spring Boot se maneja principalmente a través de la autenticación basada en tokens JWT. Cuando un usuario
+se autentica con éxito, el servidor genera un token JWT que el usuario debe incluir en las cabeceras de autorización de sus solicitudes
+HTTP subsiguientes. Este token es validado por el filtro JwtAuthenticationFilter en cada solicitud, y si es válido, la autenticación
+del usuario se establece en el contexto de seguridad de Spring.
 
 
 
