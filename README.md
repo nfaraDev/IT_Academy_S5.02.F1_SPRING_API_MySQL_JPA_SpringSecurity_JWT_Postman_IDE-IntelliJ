@@ -42,18 +42,29 @@ GET /players/*ranking/*loser: devuelve el jugador/a con peor porcentaje de éxit
 GET /players/*ranking/*winner: devuelve el jugador con peor porcentaje de éxito.
 
 **PROYECTO: JUEGO DE DADOS** 
+
 **Application.properties **
+
 Data Base= MySQL:db_game
+
 server.port=9001
+
 spring.datasource.url=jdbc:mysql://localhost:3307/db_game
+
 spring.datasource.username=root
+
 spring.datasource.password=
+
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
 spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.show-sql=true
+
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 ### Postman summary 
+
 Endpoints filter by pre-authorization:
 ```
 POST/ http://localhost:9001/auth/register
